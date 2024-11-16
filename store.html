@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Capture CJR!</title>
+<style>
+    @import url(navbar_.css);
+    @font-face {
+    font-family: 'BMJUA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    @font-face {
+    font-family: 'RiaSans-ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    .storeUI >h1{
+        font-family: 'RiaSans-ExtraBold';
+        font-size: 32px;
+        font-weight: bold;
+        margin-left : 5%;
+        top : 130px;
+    }
+
+    .storeEx{
+    position: absolute; /* 부모를 기준으로 고정 위치 지정 */
+    top: 325px; /* 고정된 상단 위치 */
+    left: 360px; /* 고정된 좌측 위치 */
+    font-family: 'BMJUA';
+    font-size: 20px; /* 폰트 크기 고정 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+    }
+
+    .footer{
+      position: absolute;
+      background-color: white;
+      width: 100%;           
+      height: 100px;
+      top : 2900px;
+    }
+
+</style>
+</head>
+<body>
+    <header> <!-- 상단 네비게이션 바-->
+        <h3 class="logo">
+          <a href="home.html">
+            <img src="sc/logo.svg" alt="Capture CJR Logo">
+          </a>
+        </h3>
+        <nav class="links">
+          <a href="join.html">Join</a>
+          <a href="store.html">Store</a>
+          <a href="map.html">Map</a> 
+          <a href="whoweare.html">Who we are</a>
+          <a href="login.html">My profile</a>
+          <button onclick="location.href='capturelist.html'">List</button>
+        </nav>
+      </header>
+
+<div class = "storeUI"> <!-- 상점 기본 UI 배치 -->
+    <h1>STORE</h1>
+    <img src = "sc/frame.svg" style="position: absolute; top: 300px; left: 300px; z-index: -1; width: 700px">
+    <img src = "sc/cjr3.png" style = "position: absolute; top: 250px; left: 100px; z-index: -1; width: 200px; ">
+    <img src = "sc/coins.png" style = "position: absolute; top: 260px; left: 1020px; z-index: -1; width: 200px;"> 
+    <h3 class = "storeEx">
+    그간 모은 포인트는 여기서 캡쮸리와 교환할 수 있어! 다양한 캡쮸리를 모아보자!
+    </h3>
+  
+  </div>
+
+  <div class="storeCJR">
+    <ul style="list-style-type: none;">
+        <li onclick="purchaseItem(this)">
+            <img src="sc/storecjr/store01.png" alt="겨울방한 캡쮸리" style = "position: absolute; top: 550px; left:100px; width: 1100px;">
+            <img src="sc/storecjr/store02.png" alt="붕어빵 캡쮸리" style = "position: absolute; top: 700px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store03.png" alt="디소공과 캡쮸리" style = "position: absolute; top: 850px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store04.png" alt="화학전공 캡쮸리" style = "position: absolute; top: 1000px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store05.png" alt="덕우당 한복 캡쮸리" style = "position: absolute; top: 1150px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store06.png" alt="시각디자인과 캡쮸리" style = "position: absolute; top: 1300px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store07.png" alt="대학 졸업 캡쮸리" style = "position: absolute; top: 1450px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store08.png" alt="덕성여대 캡쮸리" style = "position: absolute; top: 1600px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store09.png" alt="과천 사과 캡쮸리" style = "position: absolute; top: 1750px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store10.png" alt="해남 고구마 캡쮸리" style = "position: absolute; top: 1900px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store11.png" alt="양양 서핑 캡쮸리" style = "position: absolute; top: 2050px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store12.png" alt="청양 고추빵 캡쮸리" style = "position: absolute; top: 2200px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store13.png" alt="영흥 하늘 고래 스카이워크 캡쮸리" style = "position: absolute; top: 2350px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store14.png" alt="양구 지명 유래 해안 캡쮸리" style = "position: absolute; top: 2500px; left:100px;width: 1100px;">
+            <img src="sc/storecjr/store15.png" alt="해남 해남이크누스 캡쮸리" style = "position: absolute; top: 2650px; left:100px;width: 1100px;">
+
+        </li>
+    </ul>
+</div>
+
+<div class = "footer">
+</div>
+
+<!-- 외부 JavaScript 파일을 연결 -->
+<script src="store.js"></script>
+</body>
+</html>
+
+</body>
+</html>
