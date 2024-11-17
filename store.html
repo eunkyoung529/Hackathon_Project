@@ -50,7 +50,7 @@
     <header> <!-- 상단 네비게이션 바-->
         <h3 class="logo">
           <a href="home.html">
-            <img src="sc/logo.svg" alt="Capture CJR Logo">
+            <img src=static/sc/logo.svg" alt="Capture CJR Logo">
           </a>
         </h3>
         <nav class="links">
@@ -65,9 +65,9 @@
 
 <div class = "storeUI"> <!-- 상점 기본 UI 배치 -->
     <h1>STORE</h1>
-    <img src = "sc/frame.svg" style="position: absolute; top: 300px; left: 300px; z-index: -1; width: 700px">
-    <img src = "sc/cjr3.png" style = "position: absolute; top: 250px; left: 100px; z-index: -1; width: 200px; ">
-    <img src = "sc/coins.png" style = "position: absolute; top: 260px; left: 1020px; z-index: -1; width: 200px;"> 
+    <img src = "static/sc/frame.svg" style="position: absolute; top: 300px; left: 300px; z-index: -1; width: 700px">
+    <img src = "static/sc/cjr3.png" style = "position: absolute; top: 250px; left: 100px; z-index: -1; width: 200px; ">
+    <img src = "static/sc/coins.png" style = "position: absolute; top: 260px; left: 1020px; z-index: -1; width: 200px;"> 
     <h3 class = "storeEx">
     그간 모은 포인트는 여기서 캡쮸리와 교환할 수 있어! 다양한 캡쮸리를 모아보자!
     </h3>
@@ -77,21 +77,36 @@
   <div class="storeCJR">
     <ul style="list-style-type: none;">
         <li onclick="purchaseItem(this)">
-            <img src="sc/storecjr/store01.png" alt="겨울방한 캡쮸리" style = "position: absolute; top: 550px; left:100px; width: 1100px;">
-            <img src="sc/storecjr/store02.png" alt="붕어빵 캡쮸리" style = "position: absolute; top: 700px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store03.png" alt="디소공과 캡쮸리" style = "position: absolute; top: 850px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store04.png" alt="화학전공 캡쮸리" style = "position: absolute; top: 1000px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store05.png" alt="덕우당 한복 캡쮸리" style = "position: absolute; top: 1150px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store06.png" alt="시각디자인과 캡쮸리" style = "position: absolute; top: 1300px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store07.png" alt="대학 졸업 캡쮸리" style = "position: absolute; top: 1450px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store08.png" alt="덕성여대 캡쮸리" style = "position: absolute; top: 1600px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store09.png" alt="과천 사과 캡쮸리" style = "position: absolute; top: 1750px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store10.png" alt="해남 고구마 캡쮸리" style = "position: absolute; top: 1900px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store11.png" alt="양양 서핑 캡쮸리" style = "position: absolute; top: 2050px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store12.png" alt="청양 고추빵 캡쮸리" style = "position: absolute; top: 2200px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store13.png" alt="영흥 하늘 고래 스카이워크 캡쮸리" style = "position: absolute; top: 2350px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store14.png" alt="양구 지명 유래 해안 캡쮸리" style = "position: absolute; top: 2500px; left:100px;width: 1100px;">
-            <img src="sc/storecjr/store15.png" alt="해남 해남이크누스 캡쮸리" style = "position: absolute; top: 2650px; left:100px;width: 1100px;">
+            <img src="static/sc/storecjr/store01.png" alt="겨울방한 캡쮸리" style = "position: absolute; top: 550px; left:100px; width: 1100px;"
+            data-name="겨울방한 캡쮸리" data-src="static/sc/storecjr/store01.png">
+            <img src="static/sc/storecjr/store02.png" alt="붕어빵 캡쮸리" style = "position: absolute; top: 700px; left:100px;width: 1100px;"
+            data-name="붕어빵 캡쮸리" data-src="static/sc/storecjr/store02.png">
+            <img src="static/sc/storecjr/store03.png" alt="디소공과 캡쮸리" style = "position: absolute; top: 850px; left:100px;width: 1100px;"
+            data-name="디소공과 캡쮸리" data-src="static/sc/storecjr/store03.png">
+            <img src="static/sc/storecjr/store04.png" alt="화학전공 캡쮸리" style = "position: absolute; top: 1000px; left:100px;width: 1100px;"
+            data-name="화학전공 캡쮸리" data-src="static/sc/storecjr/store04.png">
+            <img src="static/sc/storecjr/store05.png" alt="덕우당 한복 캡쮸리" style = "position: absolute; top: 1150px; left:100px;width: 1100px;"
+            data-name="덕우당 한복 캡쮸리" data-src="static/sc/storecjr/store05.png">
+            <img src="static/sc/storecjr/store06.png" alt="시각디자인과 캡쮸리" style = "position: absolute; top: 1300px; left:100px;width: 1100px;"
+            data-name="시각디자인과 캡쮸리" data-src="static/sc/storecjr/store06.png">
+            <img src="static/sc/storecjr/store07.png" alt="대학 졸업 캡쮸리" style = "position: absolute; top: 1450px; left:100px;width: 1100px;"
+            data-name="대학 졸업 캡쮸리" data-src="static/sc/storecjr/store07.png">
+            <img src="static/sc/storecjr/store08.png" alt="덕성여대 캡쮸리" style = "position: absolute; top: 1600px; left:100px;width: 1100px;"
+            data-name="덕성여대 캡쮸리" data-src="static/sc/storecjr/store08.png">
+            <img src="static/sc/storecjr/store09.png" alt="과천 사과 캡쮸리" style = "position: absolute; top: 1750px; left:100px;width: 1100px;"
+            data-name="과천 사과 캡쮸리" data-src="static/sc/storecjr/store09.png">
+            <img src="static/sc/storecjr/store10.png" alt="해남 고구마 캡쮸리" style = "position: absolute; top: 1900px; left:100px;width: 1100px;"
+            data-name="해남 고구마 캡쮸리" data-src="static/sc/storecjr/store10.png">
+            <img src="static/sc/storecjr/store11.png" alt="양양 서핑 캡쮸리" style = "position: absolute; top: 2050px; left:100px;width: 1100px;"
+            data-name="양양 서핑 캡쮸리" data-src="static/sc/storecjr/store11.png">
+            <img src="static/sc/storecjr/store12.png" alt="청양 고추빵 캡쮸리" style = "position: absolute; top: 2200px; left:100px;width: 1100px;"
+            data-name="청양 고추빵 캡쮸리" data-src="static/sc/storecjr/store12.png">
+            <img src="static/sc/storecjr/store13.png" alt="영흥 하늘 고래 스카이워크 캡쮸리" style = "position: absolute; top: 2350px; left:100px;width: 1100px;"
+            data-name="영흥 하늘 고래 스카이워크 캡쮸리" data-src="static/sc/storecjr/store13.png">
+            <img src="static/sc/storecjr/store14.png" alt="양구 지명 유래 해안 캡쮸리" style = "position: absolute; top: 2500px; left:100px;width: 1100px;"
+            data-name="양구 지명 유래 해안 캡쮸리" data-src="static/sc/storecjr/store14.png">
+            <img src="static/sc/storecjr/store15.png" alt="해남 해남이크누스 캡쮸리" style = "position: absolute; top: 2650px; left:100px;width: 1100px;"
+            data-name="해남 해남이크누스 캡쮸리" data-src="static/sc/storecjr/store15.png">
 
         </li>
     </ul>
