@@ -32,21 +32,21 @@ function postCaptureData(location, points, images) {
 
 // 위치 목록
 const locations = [
-    { name: "test", lat: 37.649331, lon: 127.0217685, image: "sc/붕어빵.png", capname: "붕어빵",points: 50},
-    { name: "덕성여대", lat: 37.65154594469693, lon: 127.01605796794865, image: "sc/덕성여대.png", capname: "덕성여대",points: 30 },
-    { name: "덕성여대 차미리사관", lat: 37.65297122936526, lon: 127.01637268066406, image: "sc/디소공.png", capname: "디소공",points: 40 },
-    { name: "덕성여대 인문관", lat: 37.65327702317577, lon: 127.01498866081238, image: "sc/인문대.jpg", capname: "인문대", points: 10},
-    { name: "덕성여대 자연관", lat: 37.651917929934775, lon: 127.01726853847504, image: "sc/자연대.jpg", capname: "화학전공", points: 20},
-    { name: "덕성여대 예술관", lat: 37.65092336942347, lon: 127.01703608030584, image: "sc/예술대.jpg", capname: "시각디자인과", points: 10},
-    { name: "덕성여대 약학관", lat: 37.65104724775561, lon: 127.01824486255646, image: "sc/약학대.jpg", capname: "약사", points: 30},
-    { name: "덕성여대 덕우당", lat: 37.65030397440397, lon: 127.0155143737793, image: "sc/덕우당.jpg", capname: "덕우당 한복", points: 40},
-    { name: "해남군", lat: 34.5735165884839, lon: 126.599270065365, image: "sc/해남군.jpg", capname: "해남 이크누스",points: 50 },
-    { name: "해남군", lat: 34.4928221, lon: 126.494087, image: "sc/해남 고구마.png", capname: "해남 고구마",points: 50 },
-    { name: "옹진군", lat: 37.9534650042648, lon: 124.670086072277, image: "sc/옹진군.jpg", capname: "옹진 영흥 하늘 고래 스카이워크",points: 50 },
-    { name: "청양군", lat: 36.4592146952303, lon: 126.80220021685, image: "sc/청양군.jpg", capname: "청양 고추빵", points: 50 },
-    { name: "양구군", lat: 38.1100012808234, lon: 127.989950629015, image: "sc/양구군.jpg", capname: "양구 돼지", points: 50 },
-    { name: "양양군", lat: 38.073838757652, lon: 128.62280130386353, image: "sc/양양 서핑.png", capname: "양양 서핑",points: 50 },
-    { name: "과천시", lat: 37.4292328036839, lon: 126.987720998734, image: "sc/과천 사과.png", capname: "과천 사과",points: 50 },
+    { name: "test", lat: 37.649331, lon: 127.0217685, image: "static/sc/붕어빵.png", capname: "붕어빵",points: 50},
+    { name: "덕성여대", lat: 37.65154594469693, lon: 127.01605796794865, image: "static/sc/덕성여대.png", capname: "덕성여대",points: 30 },
+    { name: "덕성여대 차미리사관", lat: 37.65297122936526, lon: 127.01637268066406, image: "static/sc/디소공.png", capname: "디소공",points: 40 },
+    { name: "덕성여대 인문관", lat: 37.65327702317577, lon: 127.01498866081238, image: "static/sc/인문대.jpg", capname: "인문대", points: 10},
+    { name: "덕성여대 자연관", lat: 37.651917929934775, lon: 127.01726853847504, image: "static/sc/자연대.jpg", capname: "화학전공", points: 20},
+    { name: "덕성여대 예술관", lat: 37.65092336942347, lon: 127.01703608030584, image: "static/sc/예술대.jpg", capname: "시각디자인과", points: 10},
+    { name: "덕성여대 약학관", lat: 37.65104724775561, lon: 127.01824486255646, image: "static/sc/약학대.jpg", capname: "약사", points: 30},
+    { name: "덕성여대 덕우당", lat: 37.65030397440397, lon: 127.0155143737793, image: "static/sc/덕우당.jpg", capname: "덕우당 한복", points: 40},
+    { name: "해남군", lat: 34.5735165884839, lon: 126.599270065365, image: "static/sc/해남군.jpg", capname: "해남 이크누스",points: 50 },
+    { name: "해남군", lat: 34.4928221, lon: 126.494087, image: "static/sc/해남 고구마.png", capname: "해남 고구마",points: 50 },
+    { name: "옹진군", lat: 37.9534650042648, lon: 124.670086072277, image: "static/sc/옹진군.jpg", capname: "옹진 영흥 하늘 고래 스카이워크",points: 50 },
+    { name: "청양군", lat: 36.4592146952303, lon: 126.80220021685, image: "static/sc/청양군.jpg", capname: "청양 고추빵", points: 50 },
+    { name: "양구군", lat: 38.1100012808234, lon: 127.989950629015, image: "static/sc/양구군.jpg", capname: "양구 돼지", points: 50 },
+    { name: "양양군", lat: 38.073838757652, lon: 128.62280130386353, image: "static/sc/양양 서핑.png", capname: "양양 서핑",points: 50 },
+    { name: "과천시", lat: 37.4292328036839, lon: 126.987720998734, image: "static/sc/과천 사과.png", capname: "과천 사과",points: 50 },
 ];
 
 if (navigator.geolocation) {
