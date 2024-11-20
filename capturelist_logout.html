@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Capture CJR!</title>
+<link rel="stylesheet" href="{% static 'css/navbar_.css' %}">
+<style>
+    
+    @font-face {
+    font-family: 'RiaSans-ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    body {
+        position: relative;
+        width: 1200px;
+        height: 800px;
+    }
+
+    .mainText > h1 {
+        font-family: 'RiaSans-ExtraBold'; 
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .mainText {
+        margin-left: 5%;
+        top: 80px;
+    }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'home_login' %}">    <!-- 상단 로고 클릭 시 메인화면으로 이동 -->
+                <img src="../static/sc/logo.svg" alt="Capture CJR Logo">
+            </a>
+        </div>
+        <nav class="links">  
+            <a href="{% url 'home_logout' %}">Logout</a>
+            <a href="{% url 'store_login' %}">Store</a>
+            <a href="{% url 'map_login' %}">Map</a>
+            <a href="{% url 'whoweare_login' %}">Who we are</a>
+            <a href="{% url 'profile_login' %}">My profile</a>
+            <a href="{% url 'capturelist_login' %}" class="button-style">List</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="mainText">
+            <h1>Capture List</h1>
+        </div>
+    
+        <hr style="margin-left: 5%;">
+
+    <script> 
+
+        window.addEventListener('load', () => {
+            // 특정 요소가 렌더링되었는지 확인
+            const title = document.querySelector('.mainText > h1');
+            if (title) {
+                alert('로그인 후 이용해주세요!');
+                window.location.href = "{% url 'login_logout' %}";
+            }
+        });
+        
+    </script>
+    </main>
+    
+</body>
+</html>
