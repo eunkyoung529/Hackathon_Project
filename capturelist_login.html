@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Capture CJR!</title>
+<link rel="stylesheet" href="{% static 'css/navbar_.css' %}">
+<style>
+
+    @font-face {
+    font-family: 'RiaSans-ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    body {
+        position: relative;
+        width: 1200px;
+        height: 800px;
+    }
+
+    .mainText > h1 {
+        font-family: 'RiaSans-ExtraBold'; 
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .mainText {
+        margin-left: 5%;
+        top: 80px;
+    }
+
+</style>
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <a href="{% url 'home_login' %}">    <!-- 상단 로고 클릭 시 메인화면으로 이동 -->
+            <img src="../static/sc/logo.svg" alt="Capture CJR Logo">
+        </a>
+    </div>
+    <nav class="links">  
+        <a href="{% url 'home_logout' %}">Logout</a>
+        <a href="{% url 'store_login' %}">Store</a>
+        <a href="{% url 'map_login' %}">Map</a>
+        <a href="{% url 'whoweare_login' %}">Who we are</a>
+        <a href="{% url 'profile_login' %}">My profile</a>
+        <a href="{% url 'capturelist_login' %}" class="button-style">List</a>
+    </nav>
+</header>
+
+<main>
+    <div class="mainText">
+        <h1>Capture List</h1>
+    </div>
+
+    <hr style="margin-left: 5%;">
+
+    <div class="capCJR">
+        <ul style="list-style-type: none;">
+            <img src="../static/sc/caplist/캡쮸리_보유중.png" alt="캡쮸리" style="position: absolute; top: 200px; left: 100px; width: 1100px;"
+            data-name="캡쮸리" data-src="static/sc/caplist/캡쮸리_보유중.png">
+            <img src="../static/sc/nocaplist/겨울방한_미보유.png" alt="겨울방한 캡쮸리" style = "position: absolute; top: 350px; left:100px; width: 1100px;" 
+            data-name="겨울방한 캡쮸리" data-src="static/sc/nocaplist/겨울방한_미보유.png"> 
+            <img src="../static/sc/nocaplist/붕어빵_미보유.png" alt="붕어빵 캡쮸리" style = "position: absolute; top: 500px; left:100px; width: 1100px;"
+            data-name="붕어빵 캡쮸리" data-src="static/sc/nocaplist/붕어빵_미보유.png">
+            <img src="../static/sc/nocaplist/디소공과_미보유.png" alt="디소공과 캡쮸리" style = "position: absolute; top: 650px; left:100px; width: 1100px;"
+            data-name="디소공과 캡쮸리" data-src="static/sc/nocaplist/디소공과_미보유.png">
+            <img src="../static/sc/nocaplist/화학과_미보유.png" alt="화학전공 캡쮸리" style = "position: absolute; top: 800px; left:100px; width: 1100px;"
+            data-name="화학전공 캡쮸리" data-src="static/sc/nocaplist/화학과_미보유.png">
+            <img src="../static/sc/nocaplist/덕우당_미보유.png" alt="덕우당 한복 캡쮸리" style = "position: absolute; top: 950px; left:100px;width: 1100px;"
+            data-name="덕우당 한복 캡쮸리" data-src="static/sc/nocaplist/덕우당_미보유.png">
+            <img src="../static/sc/nocaplist/시각디자인과_미보유.png" alt="시각디자인과 캡쮸리" style = "position: absolute; top: 1100px; left:100px; width: 1100px;"
+            data-name="시각디자인과 캡쮸리" data-src="static/sc/nocaplist/시각디자인과_미보유.png">
+            <img src="../static/sc/nocaplist/대학 졸업_미보유.png" alt="대학 졸업 캡쮸리" style = "position: absolute; top: 1250px; left:100px; width: 1100px;"
+            data-name="대학 졸업 캡쮸리" data-src="static/sc/nocaplist/대학 졸업_미보유.png">
+            <img src="../static/sc/nocaplist/덕성여대_미보유.png" alt="덕성여대 캡쮸리" style = "position: absolute; top: 1400px; left:100px; width: 1100px;"
+            data-name="덕성여대 캡쮸리" data-src="static/sc/nocaplist/덕성여대_미보유.png">
+            <img src="../static/sc/nocaplist/과천_미보유.png" alt="과천 사과 캡쮸리" style = "position: absolute; top: 1550px; left:100px; width: 1100px;"
+            data-name="과천 사과 캡쮸리" data-src="static/sc/nocaplist/과천_미보유.png">
+            <img src="../static/sc/nocaplist/해남 고구마_미보유.png" alt="해남 고구마 캡쮸리" style = "position: absolute; top: 1700px; left:100px; width: 1100px;"
+            data-name="해남 고구마 캡쮸리" data-src="static/sc/storecjr/store10.png">
+            <img src="../static/sc/nocaplist/양양 서핑_미보유.png" alt="양양 서핑 캡쮸리" style = "position: absolute; top: 1850px; left:100px; width: 1100px;"
+            data-name="양양 서핑 캡쮸리" data-src="static/sc/nocaplist/양양 서핑_미보유.png">
+            <img src="../static/sc/nocaplist/청양_미보유.png" alt="청양 고추빵 캡쮸리" style = "position: absolute; top: 2000px; left:100px; width: 1100px;"
+            data-name="청양 고추빵 캡쮸리" data-src="static/sc/nocaplist/청양_미보유.png">
+            <img src="../static/sc/nocaplist/웅진군_미보유.png" alt="영흥 하늘 고래 스카이워크 캡쮸리" style = "position: absolute; top: 2150px; left:100px; width: 1100px;"
+            data-name="영흥 하늘 고래 스카이워크 캡쮸리" data-src="static/sc/nocaplist/웅진군_미보유.png">
+            <img src="../static/sc/nocaplist/양구군_미보유.png" alt="양구 지명 유래 해안 캡쮸리" style = "position: absolute; top: 2300px; left:100px; width: 1100px;"
+            data-name="양구 지명 유래 해안 캡쮸리" data-src="static/sc/nocaplist/양구군_미보유.png">
+            <img src="../static/sc/nocaplist/해남이크누스_미보유.png" alt="해남 해남이크누스 캡쮸리" style = "position: absolute; top: 2450px; left:100px; width: 1100px;"
+            data-name="해남 해남이크누스 캡쮸리" data-src="static/sc/nocaplist/해남이크누스_미보유.png">
+        </ul>
+    </div>
+
+</main>
+</body>
+</html>
