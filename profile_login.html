@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Capture CJR!</title>
+<link rel="stylesheet" href="{% static 'css/navbar_.css' %}">
+
+<style>
+    @font-face {
+        font-family: 'RiaSans-ExtraBold';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body {
+        position: relative;
+        width: 1200px;
+        height: 800px;
+    }
+
+    .user_name {
+    font-family: 'NoonnuBasicGothicRegular'; 
+    }
+
+    .mainText {
+        font-family: 'RiaSans-ExtraBold';
+        margin-left: 5%;
+        top: 80px;
+    }
+
+    .mainText > h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 80px;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin-left: 10%;
+    }
+
+    thead {
+        border-top: 1px solid gray;
+    }
+
+    th {
+        text-align: center;
+        padding: 5%;
+        height: 15px;
+        width: 300px;
+    }
+
+    td {
+        border-bottom: 1px solid gray;
+        text-align: center;
+        padding: 5%;
+        height: 15px;
+        width: 300px;
+    }
+
+    .user_info div {
+        display: inline-block;
+        margin-right: 5%;
+        margin-bottom: 2%;
+        /*vertical-align: middle;*/
+    }
+
+    .user_info table {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+
+    }
+
+
+</style>
+
+</head>
+<body>
+<header> <!-- 상단 로고 및 메뉴바 -->
+    <h3 class="logo">
+        <a href="{% url 'home_login' %}">    <!-- 상단 로고 클릭 시 메인화면으로 이동 -->
+        <img src="../static/sc/logo.svg" alt="Capture CJR Logo">
+        </a>
+    </h3>
+<nav class="links">  <!-- 메뉴 페이지 링크 수정바람 -->
+    <a href="{% url 'home_logout' %}">Logout</a>
+    <a href="{% url 'store_login' %}">Store</a>
+    <a href="{% url 'map_login' %}">Map</a>
+    <a href="{% url 'whoweare_login' %}">Who we are</a>
+    <a href="{% url 'profile_login' %}">My profile</a>
+    <a href="{% url 'capturelist_login' %}" class="button-style">List</a>
+</nav>
+</header>
+
+<body>
+    <div class="mainText">
+        <h1>My Profile...</h1>
+    </div>
+
+    <div class="user_info" style="margin-top: 5%; margin-left: 8%;"> <!-- user_info와 captue_list의 margin-left 동일하게 설정 -->
+        <div class="user_name">
+            <h3>{{user.first_name}} 님</h3> <!--백에서 사용자 이름 받아 처리-->
+        </div> 
+        <table>
+            <thead>
+                <tr><th>포인트</th><th>보유한 캡쮸리</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>{{info.points}} P</td><td>{{purchases|length}} 마리</td></tr> <!-- 백에서 사용자 포인트/사용자 캡쮸리 받아 처리 -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mainText" style="margin-left: 8%; margin-top: 10%;">
+        <h2>CAPTURE LIST</h2>
+    </div>
+    <hr style="margin-left: 8%; margin-right: 8%;">
+    <div class="capture_list" style="margin-left: 8%;">
+        <br>
+        <img src="../static/sc/caplist/캡쮸리_보유중.png" alt="캡쮸리" style="width: 75%; height: 50%;">
+        {% for purchase in purchases %}
+        <div class="item">
+            <img src="{% static purchase.item.item_image %}" alt="{{ purchase.item.item_name }}" style="max-width: 75%; max-height: 50%;">
+        </div>
+        {% empty %}
+            <p>No items purchased yet.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
